@@ -81,7 +81,7 @@ export const Form = () => {
                 className='form-control'
                 name="file"
                 onChange={handleChange}
-            
+                accept="image/*"
               />
         </div>
         </div>

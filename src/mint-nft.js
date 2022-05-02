@@ -1,10 +1,9 @@
 import { config } from "./config";
-import { getWeb3 } from "./getWeb3";
 import MyNFT from "./Polygon-NFT/artifacts/contracts/MyNFT.sol/MyNFT.json";
 
-const {PUBLIC_KEY, PRIVATE_KEY, API_URL} = config;
+const {PUBLIC_KEY, PRIVATE_KEY} = config;
 
-const contractAddress = "0x4a02a6b863A9171495D28d69c53E2F9152120dc6";
+export const contractAddress = "0xDedE0d25fFF3BB35fcEB0d1508439353fc9115E7";
 const contract = MyNFT;
 
 
