@@ -32,9 +32,13 @@ export const ownerOfToken = async (tokenId) => {
 }
 
 export const buy_nft = async (token_id) => { 
+    const price=0.1*10**18;
     const web3 = await getWeb3();
     const accounts = await web3.eth.getAccounts();
     const contract = new web3.eth.Contract(MyNFT.abi, contractAddress);
-    const token_id_response = await contract.methods.transferToken(token_id).send({ from: accounts[0] });
-    console.log(token_id_response);
+    const token_id_response = await contract.methods.transferToken(token_id).send({ from: accounts[0],value:price });
+    return {
+        success: true,
+        tx_hash:token_id_response
+    };
 }

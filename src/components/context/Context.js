@@ -17,9 +17,10 @@ export const Context = ({ children }) => {
     }, []);
 
     const ownerCheck = async () => {
-        let {success,contractOwnerAddress,connectedAddress} = await isOwner();
+        let { success, contractOwnerAddress, connectedAddress } = await isOwner();
+        const admin=contractOwnerAddress===connectedAddress;
         console.log(success, contractOwnerAddress, connectedAddress);
-        setOwner({isOwner:success,contractOwnerAddress:contractOwnerAddress,connectedAddress:connectedAddress});
+        setOwner({isOwner:success,contractOwnerAddress:contractOwnerAddress,connectedAddress:connectedAddress,admin:admin});
     }
   return (
       <ownerContext.Provider value={owner}>

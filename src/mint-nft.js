@@ -3,7 +3,7 @@ import MyNFT from "./Polygon-NFT/artifacts/contracts/MyNFT.sol/MyNFT.json";
 
 const {PUBLIC_KEY, PRIVATE_KEY} = config;
 
-export const contractAddress = "0xDedE0d25fFF3BB35fcEB0d1508439353fc9115E7";
+export const contractAddress = "0xe91BF1D302deD9B3fC3f5D17eCA2CCa5107f4aB6";
 const contract = MyNFT;
 
 

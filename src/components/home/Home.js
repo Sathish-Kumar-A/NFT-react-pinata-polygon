@@ -40,14 +40,15 @@ export const Home = () => {
                                   <NFT 
                                       ipfs_pin_hash={item.ipfs_pin_hash}
                                       index={index}
+                                      hashArray={hashArray}
                                   />
                               )
                            })
                       }
                   </div>
                   :
-                  <div> No image files stored </div>
-              :<div>loading</div>}
+                  <h3 className='text-center my-4'> No NFT Found... :( </h3>
+              :<h3 className='text-center my-4'>Loading the NFTs...</h3>}
     </div>
   )
 }
